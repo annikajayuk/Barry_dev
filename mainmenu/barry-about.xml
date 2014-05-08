@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mythmenu name="BARRY_ABOUT">
+    
+    <button>
+        <type>BARRY_ABOUT_BATCH</type>
+        <text>Batch icons by Adam Whitcroft</text>
+        <description>adamwhitcroft.com/batch</description>
+        <action>MENU</action>
+    </button>
+    
+<!-- 
+    <button>
+        <type>BARRY_ABOUT_CUSTOMISE</type>
+        <text>Customise Barry</text>
+        <description>Change Barry’s look.</description>
+        <action>MENU mainmenu/barry-customise.xml</action>
+    </button>
+ -->
+    
+</mythmenu>

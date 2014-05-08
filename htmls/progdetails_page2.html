@@ -1,0 +1,142 @@
+<HTML>
+<head>
+    <style type="text/css">
+        html,body,* {margin:0;padding:0;border:0;}
+        h1          {font-size:26px;font-style: normal;font-family: "Lucida Grande",sans-serif;color:#CCCCCC;}
+        p           {font-size:28px;font-style: normal;font-family: "Lucida Grande",sans-serif;color:#FFFFFF;}
+        div.row     {clear:both;}
+        
+        div.row div {
+            float:left;
+            width:507px;
+            background-color:#222222;
+            padding:8px;
+        }
+        
+        div.row div:nth-child(even) {
+            margin-right:0;
+        }
+        
+        div.row div:last-child {
+            margin-bottom: 6px;
+        }
+        
+        div.row div:last-child:nth-child(2n+3), div.row div:only-child {
+            float:none;
+            clear:both;
+            width:auto;
+            margin-right:0;
+        }
+        
+        div.row:last-child div  {margin-bottom:0;}
+        
+        .center {text-align:center;}
+        .id     {word-wrap:break-word;}
+        
+        div.small h1    {font-size:24px;}
+        div.small p     {font-size:26px;}
+        
+        div#title h1    {display:none;}
+        div#title p     {font-size:34px;font-weight:bold;}
+        div#desc h1     {display:none;}
+        div#desc p      {font-size:30px}
+/*         div#desc div    {margin-top:6px;margin-bottom:12px;} */
+    </style>
+    <script>
+        function go() {
+            var rows = document.getElementsByClassName('row');
+            for (var i = 0; i < rows.length; ++i) {
+                var row = rows[i];
+                if (Math.floor(row.children.length/2)>0) {
+                    for (var j = 0; j < row.children.length; j=j+2) {
+                        var cell1 = row.children[j];
+                        var cell2 = row.children[j+1];
+                        
+                        if (!cell2) break;
+                        
+                        var cell1h = parseInt(window.getComputedStyle(cell1).height);
+                        var cell2h = parseInt(window.getComputedStyle(cell2).height);
+                        
+                        var subrowh = Math.max(cell1h, cell2h);
+                        
+                        cell1.style.height = subrowh + 'px';
+                        cell2.style.height = subrowh + 'px';
+                    }
+                }
+            }
+            
+//             var titlediv = document.getElementById('title');
+//             if (titlediv) var titlep = titlediv.getElementsByTagName('p')[0];
+//             if (titlep) {
+//                 var titleonly = titlep.textContent.match(/"(.*)"/);
+//                 var titlesubtitle = titlep.textContent.match(/"(.*)"( - ".*")/);
+//                 
+//                 if (titlesubtitle) {
+//                     titlep.textContent = titlesubtitle.slice(1).join('');
+//                 } else if (titleonly) {
+//                     titlep.textContent = titleonly[1];
+//                 }
+//             }
+        }
+        window.onload = go;
+    </script>
+</head>
+
+<body>
+    <div id="title" class="row center">
+        <div><h1>%TITLE_LABEL%</h1> <p>%TITLE%</p></div>
+    </div>
+    <div class="row center">
+        <div><h1>%TITLE_PRONOUNCE_LABEL%</h1> <p>%TITLE_PRONOUNCE%</p></div>
+    </div>
+    <div id="desc" class="row">
+        <div><h1>%DESCRIPTION_LABEL%</h1> <p>%DESCRIPTION%</p></div>
+    </div>
+    <div class="row">
+        <div><h1>%EPISODE_LABEL%</h1> <p>%EPISODE%</p></div>
+        <div><h1>%CATEGORY_LABEL%</h1> <p>%CATEGORY%</p></div>
+        <div><h1>%MYTHTV_STATUS_LABEL%</h1> <p>%MYTHTV_STATUS%</p></div>
+        <div><h1>%ORIGINAL_AIRDATE_LABEL%</h1> <p>%ORIGINAL_AIRDATE%</p></div>
+    </div>
+    
+    <div class="row small">
+        <div><h1>%CATEGORY_TYPE_LABEL%</h1> <p class="id">%CATEGORY_TYPE%</p></div>
+        <div><h1>%PROGRAMID_LABEL%</h1> <p class="id">%PROGRAMID%</p></div>
+        <div><h1>%RECORDING_GROUP_LABEL%</h1> <p>%RECORDING_GROUP%</p></div>
+        <div><h1>%LAST_RECORDED_LABEL%</h1> <p>%LAST_RECORDED%</p></div>
+        <div><h1>%NEXT_RECORDING_LABEL%</h1> <p>%NEXT_RECORDING%</p></div>
+        <div><h1>%AVERAGE_TIME_SHIFT_LABEL%</h1> <p>%AVERAGE_TIME_SHIFT%</p></div>
+        <div><h1>%WATCH_LIST_SCORE_LABEL%</h1> <p>%WATCH_LIST_SCORE%</p></div>
+        <div><h1>%WATCH_LIST_STATUS_LABEL%</h1> <p>%WATCH_LIST_STATUS%</p></div>
+    </div>
+    
+    <div class="row small">
+        <div><h1>%RECORDING_RULE_LABEL%</h1> <p>%RECORDING_RULE%</p></div>
+        <div><h1>%SEARCH_PHRASE_LABEL%</h1> <p>%SEARCH_PHRASE%</p></div>
+        <div><h1>%FINDID_LABEL%</h1> <p>%FINDID%</p></div>
+        <div><h1>%RECORDING_HOST_LABEL%</h1> <p>%RECORDING_HOST%</p></div>
+        <div><h1>%RECORDED_FILE_NAME_LABEL%</h1> <p>%RECORDED_FILE_NAME%</p></div>
+        <div><h1>%RECORDED_FILE_SIZE_LABEL%</h1> <p>%RECORDED_FILE_SIZE%</p></div>
+        <div><h1>%RECORDING_PROFILE_LABEL%</h1> <p>%RECORDING_PROFILE%</p></div>
+        <div><h1>%STORAGE_GROUP_LABEL%</h1> <p>%STORAGE_GROUP%</p></div>
+        <div><h1>%PLAYBACK_GROUP_LABEL%</h1> <p>%PLAYBACK_GROUP%</p></div>
+    </div>
+    
+    <div class="row">
+        <div><h1>%DIRECTOR_LABEL%</h1> <p>%DIRECTOR%</p></div>
+        <div><h1>%WRITER_LABEL%</h1> <p>%WRITER%</p></div>
+        <div><h1>%PRODUCER_LABEL%</h1> <p>%PRODUCER%</p></div>
+        <div><h1>%EXECUTIVE_PRODUCER_LABEL%</h1> <p>%EXECUTIVE_PRODUCER%</p></div>
+        <div><h1>%GUEST_STAR_LABEL%</h1> <p>%GUEST_STAR%</p></div>
+        <div><h1>%HOST_LABEL%</h1> <p>%HOST%</p></div>
+        <div><h1>%ADAPTER_LABEL%</h1> <p>%ADAPTER%</p></div>
+        <div><h1>%PRESENTER_LABEL%</h1> <p>%PRESENTER%</p></div>
+        <div><h1>%COMMENTATOR_LABEL%</h1> <p>%COMMENTATOR%</p></div>
+        <div><h1>%GUEST_LABEL%</h1> <p>%GUEST%</p></div>
+    </div>
+    <div class="row small">
+        <div><h1>%ACTORS_LABEL%</h1> <p>%ACTORS%</p></div>
+    </div>
+</body>
+
+</html>

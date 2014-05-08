@@ -1,0 +1,1251 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+
+<!-- theme.xml for the MythCenter theme - by Jeroen Brosens -->
+<mythuitheme>
+    <!-- 720->1080 *1.5: done -->
+    
+    <window name="mainmenu">
+        
+        <fontdef name="menufont" face="Lucida Grande"><!-- barry-font-primary -->
+            <color>#CCCCCC</color>
+            <pixelsize>48</pixelsize>
+            <weight>bold</weight>
+            <shadowcolor>#000000</shadowcolor>
+            <shadowoffset>2,2</shadowoffset>
+            <shadowalpha>50</shadowalpha>
+        </fontdef>
+        
+        <fontdef name="menufont_selected" from="menufont">
+            <color>#FFFFFF</color>
+        </fontdef>
+        
+        <fontdef name="menufont_desc" from="menufont">
+            <color>#EEEEEE</color>
+            <pixelsize>40</pixelsize>
+            <weight>normal</weight>
+        </fontdef>
+        
+        <fontdef name="menufont_desc_selected" from="menufont_desc">
+            <color>#DDDDDD</color>
+        </fontdef>
+        
+        <group name="titlebar" from="basetitlebar">
+            <area>0,0,1920,58</area>
+            
+            <statetype name="titles">
+                <state name="MAIN">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>Home</value>
+                    </textarea>
+                </state>
+                <state name="SCHEDULE">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>Schedule Recordings</value>
+                    </textarea>
+                </state>
+                <state name="SEARCH">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>Search Listings</value>
+                    </textarea>
+                </state>
+                <state name="TVSETUP">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>TV Settings</value>
+                    </textarea>
+                </state>
+                <state name="SETUP_TVRECPRIORITIES">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>Recording Priorities</value>
+                    </textarea>
+                </state>
+                <state name="MORE">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>More</value>
+                    </textarea>
+                </state>
+                <state name="SETUP">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>Setup</value>
+                    </textarea>
+                </state>
+                <state name="VIDEO_SETTINGS">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>Videos Settings</value>
+                    </textarea>
+                </state>
+                <state name="MEDIA">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>Media</value>
+                    </textarea>
+                </state>
+                <state name="INTERNET">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>Internet</value>
+                    </textarea>
+                </state>
+                
+                <!-- barry titles -->
+                <state name="BARRY_ABOUT">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>About Barry</value>
+                    </textarea>
+                </state>
+                <state name="BARRY_CUSTOMISE">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>Customise Barry</value>
+                    </textarea>
+                </state>
+                <state name="BARRY_COLOUR">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>Customise Colour</value>
+                    </textarea>
+                </state>
+                <state name="BARRY_FONT">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>Customise Font</value>
+                    </textarea>
+                </state>
+                <state name="BARRY_BACKDROP">
+                    <area>0,0,1920,58</area>
+                    <textarea name="text" from="basetb-left">
+                        <value>Customise Backdrop</value>
+                    </textarea>
+                </state>
+            </statetype>
+            
+            <textarea name="tb-title" from="basetb-title">
+                <value>MythTV</value>
+            </textarea>
+            
+        </group>
+        
+        <group name="old-titlesgroup">
+<!-- 
+            <statetype name="titles">
+                <position>36,42</position>
+                <state name="TV">
+                    <imagetype name="TV">
+                        <filename>title/title_tv.png</filename>
+                    </imagetype>
+                </state>
+                <state name="MUSIC">
+                    <imagetype name="MUSIC">
+                        <filename>title/title_music.png</filename>
+                    </imagetype>
+                </state>
+                <state name="GALLERY">
+                    <imagetype name="GALLERY">
+                        <filename>title/title_gallery.png</filename>
+                    </imagetype>
+                </state>
+                <state name="VIDEO">
+                    <imagetype name="VIDEO">
+                        <filename>title/title_video.png</filename>
+                    </imagetype>
+                </state>
+                <state name="GAMES">
+                    <imagetype name="GAMES">
+                        <filename>title/title_games.png</filename>
+                    </imagetype>
+                </state>
+                <state name="WEATHER">
+                    <imagetype name="WEATHER">
+                        <filename>title/title_weather.png</filename>
+                    </imagetype>
+                </state>
+                <state name="WORDS" from="SEARCH" />
+                <state name="LISTS" from="SEARCH" />
+                <state name="MEDIA_SETUP">
+                    <imagetype name="MEDIA_SETUP">
+                        <filename>title/title_multimedia.png</filename>
+                    </imagetype>
+                </state>
+                <state name="INFO_SETUP">
+                    <imagetype name="INFO_SETUP">
+                        <filename>title/title_info_settings.png</filename>
+                    </imagetype>
+                </state>
+                <state name="DVD">
+                    <imagetype name="DVD">
+                        <filename>title/title_dvd.png</filename>
+                    </imagetype>
+                </state>
+                <state name="DISC_SETTINGS" from="DVD" />
+                <state name="MUSIC_SETTINGS">
+                    <imagetype name="MUSIC_SETTINGS">
+                        <filename>title/title_music_setup.png</filename>
+                    </imagetype>
+                </state>
+                <state name="GAME_SETTINGS" from="GAMES" />
+                <state name="MANAGE_RECORDINGS" from="SCHEDULE" />
+                <state name="LIBRARY">
+                    <imagetype name="LIBRARY">
+                        <filename>title/title_multimedia.png</filename>
+                    </imagetype>
+                </state>
+                <state name="INFO">
+                    <imagetype name="INFO">
+                        <filename>title/title_info_center.png</filename>
+                    </imagetype>
+                </state>
+                <state name="OPTICAL_DISK" from="DVD" />
+                <state name="UTIL" from="SETUP" />
+                <state name="NETFLIX" from="DVD" />
+            </statetype>
+ -->
+        </group>
+        
+        <buttonlist name="menu">
+            <area>0,60,1920,960</area>
+            <animation trigger="AboutToShow">
+                <section duration="150">
+                    <zoom start="96" end="100" />
+                </section>
+            </animation>
+            <animation trigger="AboutToHide">
+                <section duration="100">
+                    <zoom start="100" end="96" />
+                </section>
+            </animation>
+            <layout>grid</layout>
+            <spacing>8</spacing>
+            <arrange>stack</arrange>
+            <align>center</align>
+            <wrapstyle>flowing</wrapstyle>
+            <buttonarea>0,0,1920,960</buttonarea>
+            
+            <statetype name="buttonitem">
+                <state name="active">
+                    <area>0,0,956,185</area>
+                    
+                    <shape name="selectbar">
+                        <area>0,0,100%,100%</area>
+                        <type>box</type>
+                        <fill color="#ffffff" alpha="192" />
+                        <alpha>32</alpha>
+                    </shape>
+                    
+                    <textarea name="buttontext">
+                        <area>12,0,100%,72</area>
+                        <font>menufont</font>
+                        <align>left,vcenter</align>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                    
+                    <shape name="descbg_selected">
+                        <area>0,74,100%,100%</area>
+                        <type>box</type>
+                        <fill color="#000000" alpha="0" />
+                    </shape>
+                    
+                    <!-- icon statetype -->
+                    <statetype name="icon">
+                        <area>100%-95,100%-95,79,79</area>
+                        <alpha>128</alpha>
+                        
+                        <!-- mainmenu.xml icons-->
+                        <state name="TV_WATCH_RECORDINGS">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/eye.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_SCHEDULE_RECORDINGS">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/plus.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_WATCH_TV">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/polaroid.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_STATUS">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/bulb-2.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="ROOT_SETTINGS_TV">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/settings-4.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="MORE">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/ellipsis.png</filename>
+                            </imagetype>
+                        </state>
+                        
+                        <!-- tv_schedule.xml icons -->
+                        <state name="TV_PROGRAM_GUIDE">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/grid.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_PROGFIND">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/list.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_SEARCH_LISTINGS">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/search-2.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_CUSTOM_RECORD">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/database-add.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_MANUAL_SCHEDULE">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/stopwatch.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_RECORDING_RULES">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/clipboard-2.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_PREVIOUS">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/revert.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_CONFLICTS">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/timeline.png</filename>
+                            </imagetype>
+                        </state>
+                        
+                        <!-- tv_search.xml icons -->
+                        <state name="TV_SEARCH_TITLES">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/menu-5rows.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_SEARCH_KEYWORDS">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/asterisk.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_SEARCH_PEOPLE">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/user-3.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_SEARCH_POWER">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/intersect.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_SEARCH_NEW_TITLES">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/spam-2.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_SEARCH_MOVIES">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/star.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_SEARCH_CATEGORIES">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/tag-3.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_SEARCH_CHANNELS">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/polaroid-blank.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_SEARCH_TIMES">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/clock.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="TV_SEARCH_STORED">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/database.png</filename>
+                            </imagetype>
+                        </state>
+                        
+                        <!-- more.xml icons -->
+                        <state name="SETUP">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/settings-4.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="RELOAD_THEME">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/refresh.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="MEDIA">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/play.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="INTERNET">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/link.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="ARCHIVE">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/stiffy.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="ABOUT_BARRY">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/user.png</filename>
+                            </imagetype>
+                        </state>
+                        
+                        <!-- media.xml icons -->
+                        <state name="MUSIC">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/vinyl.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="VIDEO">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/video-2.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="IMAGES">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/camera-3.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="GAME">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/infinity.png</filename>
+                            </imagetype>
+                        </state>
+                        
+                        <!-- internet.xml icons -->
+                        <state name="NEWS">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/newspaper.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="WEBPAGE">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/browser.png</filename>
+                            </imagetype>
+                        </state>
+                        
+                        <!-- barry-about.xml icons -->
+                        <state name="BARRY_ABOUT_BATCH">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/heart-full.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="BARRY_ABOUT_CUSTOMISE">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/barry-empty.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="CUSTOMISE_BARRY" from="BARRY_ABOUT_CUSTOMISE" />
+                        
+                        <!-- barry-customise.xml icons -->
+                        <state name="BARRY_CUSTOMISE_COLOUR">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/swatches.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="BARRY_CUSTOMISE_FONT">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/barry-font.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="BARRY_CUSTOMISE_BACKDROP">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/image.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="BARRY_CUSTOMISE_COLOURBAR">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/barry-colourbar.png</filename>
+                            </imagetype>
+                        </state>
+                        
+                        <!-- barry settings icons -->
+                        <state name="BARRY_MENUSTATE_1">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/barry-on.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="BARRY_MENUSTATE_0">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/barry-off.png</filename>
+                            </imagetype>
+                        </state>
+                        <state name="BARRY_MENUSTATE_E">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/barry-empty.png</filename>
+                            </imagetype>
+                        </state>
+                        
+                        <!-- barry-colour.xml icons -->
+                        <state name="BARRY_COLOUR_B" from="BARRY_MENUSTATE_1" />
+                        <state name="BARRY_COLOUR_O" from="BARRY_MENUSTATE_E" />
+                        <state name="BARRY_COLOUR_P" from="BARRY_MENUSTATE_E" />
+                        <state name="BARRY_COLOUR_R" from="BARRY_MENUSTATE_E" />
+                        
+                        <!-- barry-font.xml icons -->
+                        <state name="BARRY_FONT_DROIDSANS" from="BARRY_MENUSTATE_E" />
+                        <state name="BARRY_FONT_LUCIDAGRANDE" from="BARRY_MENUSTATE_1" />
+                        <state name="BARRY_FONT_UBUNTU" from="BARRY_MENUSTATE_E" />
+                        
+                        <!-- barry-backdrop.xml icons -->
+                        <state name="BARRY_BACKDROP_PIXELATE" from="BARRY_MENUSTATE_1" />
+                        <state name="BARRY_BACKDROP_NOISYPIXELS" from="BARRY_MENUSTATE_E" />
+                        <state name="BARRY_BACKDROP_LYRAPIXELS" from="BARRY_MENUSTATE_E" />
+                        <state name="BARRY_BACKDROP_NONE" from="BARRY_MENUSTATE_E" />
+                        
+                        <!-- default icon -->
+                        <state name="default">
+                            <imagetype name="icon">
+                                <area>0,0,79,79</area>
+                                <filename>menuicons/bullet-padded.png</filename>
+                            </imagetype>
+                        </state>
+                    </statetype>
+                    
+                </state>
+                <state name="selectedinactive" from="active">
+                    
+                    <shape name="selectbar">
+                        <area>0,0,100%,100%</area>
+                        <fill color="#ffffff" alpha="192" />
+                        <alpha>24</alpha>
+                    </shape>
+                    
+                </state>
+                <state name="selectedactive" from="active">
+                    
+                    <shape name="descbg_selected">
+                        <area>0,74,100%,100%</area>
+                        <type>box</type>
+                        <fill color="#000000" alpha="48" />
+                    </shape>
+                    
+                    <shape name="selectbar">
+                        <area>0,0,100%,100%</area>
+                        <!-- barry-selectcolour-normal --><fill color="#0096ff" alpha="192" />
+                        <alpha>240</alpha>
+                    </shape>
+                    
+                    <textarea name="buttontext">
+                        <area>12,0,100%,72</area>
+                        <font>menufont_selected</font>
+                        <align>left,vcenter</align>
+                        <cutdown>yes</cutdown>
+                    </textarea>
+                    
+                    <textarea name="description">
+                        <area>12,78,65%,100%-4</area>
+                        <font>menufont_desc_selected</font>
+                        <align>left,top</align>
+                        <cutdown>yes</cutdown>
+                        <multiline>yes</multiline>
+                    </textarea>
+                    
+                    <statetype name="icon">
+                        <alpha>240</alpha>
+                    </statetype>
+                    
+                </state>
+            </statetype>
+            
+            <scrollbar name="scrollbar" from="basevertscrollbar">
+                <area>100%-8,0,8,100%</area>
+            </scrollbar>
+            
+            <statetype name="upscrollarrow">
+                <position>50%-25,0</position>
+                <showempty>yes</showempty>
+                <state type="full">
+                    <imagetype name="upon">
+                        <filename>ui/up.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            
+            <statetype name="downscrollarrow">
+                <position>50%-25,100%-50</position>
+                <showempty>yes</showempty>
+                <state type="full">
+                    <imagetype name="dnon">
+                        <filename>ui/down.png</filename>
+                    </imagetype>
+                </state>
+            </statetype>
+            
+        </buttonlist>
+        
+        <group name="old-watermarksgroup">
+<!-- 
+            <statetype name="watermarks">
+                <position>1248,294</position>
+
+                <state name="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/tv.png</filename>
+                        <reflection axis="vertical" shear="0" scale="85" length="35" />
+                    </imagetype>
+                </state>
+                <!~~   mainmenu.xml  ~~>
+                <state name="TV" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/tv.png</filename>
+                    </imagetype>
+                </state>
+                <state name="MUSIC" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/music.png</filename>
+                    </imagetype>
+                </state>
+                <state name="VIDEO" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/video.png</filename>
+                    </imagetype>
+                </state>
+                <state name="DVD" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/dvd.png</filename>
+                    </imagetype>
+                </state>
+                <state name="FM" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/radio.png</filename>
+                    </imagetype>
+                </state>
+                <state name="IMAGES" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/gallery.png</filename>
+                    </imagetype>
+                </state>
+                <state name="GAME" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/joystick.png</filename>
+                    </imagetype>
+                </state>
+                <state name="WEATHER" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/weather.png</filename>
+                    </imagetype>
+                </state>
+                <state name="NEWS" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/news.png</filename>
+                    </imagetype>
+                </state>
+                <state name="WEBPAGE" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/browser.png</filename>
+                    </imagetype>
+                </state>
+                <state name="RECIPE" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/pie.png</filename>
+                    </imagetype>
+                </state>
+                <state name="PHONE" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/phone.png</filename>
+                    </imagetype>
+                </state>
+                <state name="SETUP" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/setup.png</filename>
+                    </imagetype>
+                </state>
+                <state name="SHUTDOWN" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/important.png</filename>
+                    </imagetype>
+                </state>
+
+                <!~~   dvdmenu.xml  ~~>
+                <state name="DISC_PLAY" from="DVD" />
+
+                <!~~   dvd_settings.xml  ~~>
+                <state name="DVD_SETTINGS_GENERAL" from="DVD" />
+                <state name="DVD_SETTINGS_PLAY" from="DVD" />
+
+                <!~~   game_settings.xml  ~~>
+                <state name="GAME_SETTINGS_GENERAL" from="GAME" />
+                <state name="GAME_SCAN" from="GAME" />
+
+                <!~~ Netflix ~~>
+                <state name="NETFLIX" from="DVD" />
+                <state name="NETFLIX_QUEUE" from="DVD" />
+                <state name="NETFLIX_BROWSE" from="DVD" />
+                <state name="NETFLIX_HISTORY" from="DVD" />
+                <state name="SETTINGS_NETFLIX" from="DVD" />
+
+                <!~~   main_settings.xml  ~~>
+                <state name="SETTINGS_GENERAL" from="SETUP" />
+                <state name="SETTINGS_SYSTEM_EVENTS" from="SETUP" />
+                <state name="SETTINGS_APPEARANCE" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/appearance.png</filename>
+                    </imagetype>
+                </state>
+                <state name="SCREENSETUPWIZARD" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/screenwiz.png</filename>
+                    </imagetype>
+                </state>
+                <state name="SETTINGS_TV" from="TV" />
+                <state name="SETTINGS_MUSIC" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/music_settings.png</filename>
+                    </imagetype>
+                </state>
+                <state name="SETTINGS_VIDEO" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/video_settings.png</filename>
+                    </imagetype>
+                </state>
+                <state name="SETTINGS_DVD" from="DVD" />
+                <state name="SETTINGS_FM" from="FM" />
+                <state name="SETTINGS_IMAGES" from="IMAGES" />
+                <state name="SETTINGS_GAME" from="GAME" />
+                <state name="SETTINGS_WEATHER" from="WEATHER" />
+                <state name="SETTINGS_NEWS" from="NEWS" />
+                <state name="SETTINGS_WEBPAGE" from="WEBPAGE" />
+                <state name="SETTINGS_RECIPE" from="RECIPE" />
+                <state name="SETTINGS_XBOX" from="SETUP" />
+                <state name="SETUP_KEYS" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/keys.png</filename>
+                    </imagetype>
+                </state>
+
+                <!~~   musicmenu.xml  ~~>
+                <state name="MUSIC_PLAY" from="MUSIC" />
+                <state name="MUSIC_PLAYLIST" from="MUSIC" />
+                <state name="MUSIC_RIP" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/cd_rip.png</filename>
+                    </imagetype>
+                </state>
+                <state name="MUSIC_SCAN" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/search.png</filename>
+                    </imagetype>
+                </state>
+
+                <!~~   music_settings.xml  ~~>
+                <state name="MUSIC_SETTINGS_GENERAL" from="SETTINGS_MUSIC" />
+                <state name="MUSIC_SETTINGS_PLAYER" from="SETTINGS_MUSIC" />
+                <state name="MUSIC_SETTINGS_RIP" from="MUSIC_RIP" />
+
+                <!~~   tv_schedule.xml  ~~>
+
+                <state name="TV_PROGRAM_GUIDE" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/clock.png</filename>
+                    </imagetype>
+                </state>
+                <state name="TV_PROGFIND" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/search.png</filename>
+                    </imagetype>
+                </state>
+                <state name="TV_SEARCH_LISTINGS" from="TV_PROGFIND" />
+                <state name="TV_SEARCH_WORDS" from="TV_PROGFIND" />
+                <state name="TV_SEARCH_LISTS" from="TV_PROGFIND" />
+                <state name="TV_SEARCH_PEOPLE" from="TV_PROGFIND" />
+                <state name="TV_SEARCH_POWER" from="TV_PROGFIND" />
+                <state name="TV_SEARCH_KEYWORDS" from="TV_PROGFIND" />
+                <state name="TV_CUSTOM_RECORD" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/record.png</filename>
+                    </imagetype>
+                </state>
+                <state name="TV_MANUAL_SCHEDULE" from="TV_PROGRAM_GUIDE" />
+                <state name="TV_RECORDING_RULES" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/priority.png</filename>
+                    </imagetype>
+                </state>
+                <state name="TV_CONFLICTS" from="TV_CUSTOM_RECORD" />
+
+                <!~~   recpriorities_settings.xml  ~~>
+                <state name="TV_RECPRIORITIES_SETTINGS_GENERAL" from="TV_RECORDING_RULES" />
+                <state name="TV_RECPRIORITIES_CHANNEL" from="TV_RECORDING_RULES" />
+                <state name="TV_RECPRIORITIES_CUSTOM" from="TV_RECORDING_RULES" />
+
+                <!~~   setup.xml  ~~>
+                <state name="SETUP_GENERAL" from="SETUP" />
+                <state name="SETUP_SYSTEM_EVENTS" from="SETUP" />
+                <state name="SETUP_STORAGE_GROUPS" from="SETUP" />
+                <state name="SETUP_CAPTURE_CARDS" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/hardware_settings.png</filename>
+                    </imagetype>
+                </state>
+                <state name="SETUP_VIDEO_SOURCES" from="SETTINGS_VIDEO" />
+                <state name="SETUP_INPUT_CONNECTIONS" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/hardware_info.png</filename>
+                    </imagetype>
+                </state>
+                <state name="SETUP_CHANNEL_EDITOR" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/checklist.png</filename>
+                    </imagetype>
+                </state>
+
+                <!~~   tv_search.xml  ~~>
+                <state name="TV_SEARCH_TITLES" from="TV_PROGFIND" />
+                <state name="TV_SEARCH_KEYWORDS" from="TV_PROGFIND" />
+                <state name="TV_SEARCH_PEOPLE" from="TV_PROGFIND" />
+
+                <!~~   tv_lists.xml  ~~>
+                <state name="TV_SEARCH_NEW_TITLES" from="TV_PROGFIND" />
+                <state name="TV_SEARCH_MOVIES" from="TV_PROGFIND" />
+                <state name="TV_SEARCH_CATEGORIES" from="TV_PROGFIND" />
+                <state name="TV_SEARCH_CHANNELS" from="TV_PROGFIND" />
+                <state name="TV_SEARCH_TIMES" from="TV_PROGFIND" />
+
+                <!~~   tv_settings.xml  ~~>
+                <state name="TV_SETTINGS_GENERAL" from="SETUP" />
+                <state name="TV_SETTINGS_PROGRAM_GUIDE" from="TV_PROGRAM_GUIDE" />
+                <state name="TV_SETTINGS_PLAYBACK" from="TV" />
+                <state name="TV_SETTINGS_PLAYBACK_OSD" from="TV" />
+                <state name="TV_SETTINGS_PLAYBACK_GROUPS" from="TV" />
+                <state name="TV_SETTINGS_RECORDING_PROFILES" from="TV_CUSTOM_RECORD" />
+                <state name="TV_SETTINGS_RECPRIORITIES" from="TV_RECORDING_RULES" />
+
+                <!~~   tvmenu.xml  ~~>
+                <state name="TV_WATCH_TV" from="TV" />
+                <state name="TV_SCHEDULE_RECORDINGS" from="TV_PROGRAM_GUIDE" />
+                <state name="TV_WATCH_RECORDINGS" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/play.png</filename>
+                    </imagetype>
+                </state>
+                <state name="TV_PREVIOUS" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/big_arrow_down.png</filename>
+                    </imagetype>
+                </state>
+                <state name="TV_STATUS" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/info.png</filename>
+                    </imagetype>
+                </state>
+
+                <!~~   video_settings.xml  ~~>
+                <state name="VIDEO_SETTINGS_GENERAL" from="SETTINGS_VIDEO" />
+                <state name="VIDEO_SETTINGS_PLAYER" from="SETTINGS_VIDEO" />
+                <state name="VIDEO_FILE_TYPES" from="SETTINGS_VIDEO" />
+
+                <!~~   videomenu.xml  ~~>
+                <state name="VIDEO_GALLERY" from="VIDEO" />
+                <state name="VIDEO_BROWSER" from="VIDEO" />
+                <state name="VIDEO_LIST" from="SETTINGS_VIDEO" />
+                <state name="VIDEO_MANAGER" from="SETTINGS_VIDEO" />
+
+                <!~~   AltMenus Specific Icons  ~~>
+                <state name="TV_UPCOMING_RECORDINGS" from="TV_PROGRAM_GUIDE" />
+                <state name="SETTINGS_MEDIA" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/multimedia.png</filename>
+                    </imagetype>
+                </state>
+                <state name="SETTINGS_INFO_CENTER" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/info_setup.png</filename>
+                    </imagetype>
+                </state>
+                <state name="MENU_MEDIA_LIBRARY" from="SETTINGS_MEDIA" />
+                <state name="MENU_MANAGE_RECORDINGS" from="SETUP_CHANNEL_EDITOR" />
+                <state name="MENU_INFO_CENTER" from="TV_STATUS" />
+                <state name="MENU_OPTICAL_DISKS" from="DVD" />
+                <state name="MENU_UTILITIES_SETUP" from="SETUP" />
+                <state name="SETUP_FRONTEND" from="SETUP" />
+                <state name="SETUP_BACKEND" from="SETUP" />
+                <state name="SETUP_MENU" from="SETUP" />
+                <state name="STREAM" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/stream.png</filename>
+                    </imagetype>
+                </state>
+                <state name="EJECT" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/dvd_eject.png</filename>
+                    </imagetype>
+                </state>
+                <state name="ARCHIVE" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/dvd_burn.png</filename>
+                    </imagetype>
+                </state>
+                <state name="SETTINGS_ARCHIVE" from="ARCHIVE" />
+                <state name="ARCHIVE_FINDER" from="TV_PROGFIND" />
+                <state name="ARCHIVE_EXPORT_VIDEO" from="ARCHIVE" />
+                <state name="ARCHIVE_IMPORT_VIDEO" from="ARCHIVE" />
+                <state name="ARCHIVE_SELECT_RECORDINGS" from="ARCHIVE" />
+                <state name="ARCHIVE_SELECT_VIDEOS" from="ARCHIVE" />
+                <state name="ARCHIVE_SELECT_FILES" from="ARCHIVE" />
+                <state name="ARCHIVE_CREATE_DVD" from="ARCHIVE" />
+                <state name="ARCHIVE_CREATE_ARCHIVE" from="ARCHIVE" />
+                <state name="ARCHIVE_UTILITIES" from="ARCHIVE" />
+                <state name="ARCHIVE_LAST_LOG" from="TV_STATUS" />
+                <state name="ARCHIVE_TEST_DVD">
+                    <imagetype name="watermark">
+                        <filename>watermark/play.png</filename>
+                    </imagetype>
+                </state>
+                <state name="ARCHIVE_BURN_DVD" from="ARCHIVE" />
+                <!~~ Movietimes ~~>
+                <state name="MOVIETIMES" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/movietime.png</filename>
+                    </imagetype>
+                </state>
+                <state name="SETTINGS_MOVIETIME" from="MOVIETIMES" />
+                <!~~ Zoneminder ~~>
+                <state name="ZONEMINDER" from="DEFAULT">
+                    <imagetype name="watermark">
+                        <filename>watermark/zoneminder.png</filename>
+                    </imagetype>
+                </state>
+                <state name="SETTINGS_ZONEMINDER" from="ZONEMINDER" />
+            </statetype>
+ -->
+        </group>
+        
+        <statetype name="watermarks">
+            <area>0,60,1920,960</area>
+            
+            <!-- BARRY_ABOUT-base -->
+            <state name="BARRY_ABOUT-base">
+                <area>0,0,1920,379</area>
+                
+                <shape name="aboutbg">
+                    <area>0,0,1920,379</area>
+                    <type>box</type>
+                    <fill color="#ffffff" alpha="192" />
+                    <alpha>32</alpha>
+                </shape>
+                
+                <textarea name="version">
+                    <area>0,16,1920,72</area>
+                    <multiline>yes</multiline>
+                    <cutdown>no</cutdown>
+                    <align>hcenter,top</align>
+                    <font>menufont_selected</font>
+                    <!-- barry-version --><value>Barry 0.0.1</value>
+                </textarea>
+                
+                <textarea name="about1" from="version">
+                    <area>16,90,1904,50</area>
+                    <align>left,top</align>
+                    <font>menufont_desc</font>
+                    <value> — Barry is best used with “Barry menus” (without which you wouldn’t be seeing this text).</value>
+                </textarea>
+                
+                <textarea name="about2" from="about1">
+                    <area>16,140,1904,50</area>
+                    <value> — Barry has been designed for 1920 x 1080 displays.</value>
+                </textarea>
+                
+                <textarea name="about3" from="about1">
+                    <area>16,190,1904,100</area>
+                    <value> — Barry currently supports only the main menu, watch recordings, programme grid and status screens. Work on theming all DVR screens progresses.</value>
+                </textarea>
+                
+                <textarea name="about4" from="about1">
+                    <area>16,290,1904,50</area>
+                    <value> — Barry is derived from a 1280 x 720 theme, therefore unthemed screens look *bad*. Sorry.</value>
+                </textarea>
+                
+            </state>
+            <state name="BARRY_ABOUT_BATCH" from="BARRY_ABOUT-base" />
+            <state name="BARRY_ABOUT_CUSTOMISE" from="BARRY_ABOUT-base" />
+            
+            <!-- BARRY_COLOUR-base -->
+            <state name="BARRY_COLOUR-base">
+                <group name="colourpreview-blue">
+                    <area>1,98,956,185</area>
+                    
+                    <shape name="colourpreview-selectbar">
+                        <area>0,0,100%,100%</area>
+                        <fill color="#0096ff" alpha="192" />
+                        <alpha>240</alpha>
+                    </shape>
+                    
+                    <textarea name="colourpreview-buttontext">
+                        <area>12,0,100%,72</area>
+                        <font>menufont_selected</font>
+                        <align>left,vcenter</align>
+                        <cutdown>yes</cutdown>
+                        <value>Preview (Aqua)</value>
+                    </textarea>
+                    
+                    <shape name="colourpreview-descbg_selected">
+                        <area>0,74,100%,100%</area>
+                        <type>box</type>
+                        <fill color="#000000" alpha="48" />
+                    </shape>
+                    
+                    <textarea name="colourpreview-description">
+                        <area>12,78,65%,100%-4</area>
+                        <font>menufont_desc_selected</font>
+                        <align>left,top</align>
+                        <cutdown>yes</cutdown>
+                        <multiline>yes</multiline>
+                        <value>Description</value>
+                    </textarea>
+                    
+                    <imagetype name="colourpreview-icon">
+                        <alpha>240</alpha>
+                    </imagetype>
+                    
+                </group>
+                
+                <group name="colourpreview-orange" from="colourpreview-blue">
+                    <area>965,98,956,185</area>
+                    
+                    <shape name="colourpreview-selectbar">
+                        <fill color="#ff6a00" alpha="192" />
+                    </shape>
+                    
+                    <textarea name="colourpreview-buttontext">
+                        <value>Preview (Tangerine)</value>
+                    </textarea>
+                </group>
+                
+                <group name="colourpreview-purple" from="colourpreview-blue">
+                    <area>1,677,956,185</area>
+                    
+                    <shape name="colourpreview-selectbar">
+                        <fill color="#7f35fe" alpha="192" />
+                    </shape>
+                    
+                    <textarea name="colourpreview-buttontext">
+                        <value>Preview (Grape)</value>
+                    </textarea>
+                </group>
+                
+                <group name="colourpreview-red" from="colourpreview-blue">
+                    <area>965,677,956,185</area>
+                    
+                    <shape name="colourpreview-selectbar">
+                        <fill color="#7f0000" alpha="192" />
+                    </shape>
+                    
+                    <textarea name="colourpreview-buttontext">
+                        <value>Preview (Cayenne)</value>
+                    </textarea>
+                </group>
+            </state>
+            <state name="BARRY_COLOUR_B" from="BARRY_COLOUR-base" />
+            <state name="BARRY_COLOUR_O" from="BARRY_COLOUR-base" />
+            <state name="BARRY_COLOUR_P" from="BARRY_COLOUR-base" />
+            <state name="BARRY_COLOUR_R" from="BARRY_COLOUR-base" />
+            
+            <!-- BARRY_FONT-base -->
+            <state name="BARRY_FONT-base">
+                <fontdef name="previewfont-droidsans" from="menufont_selected" face="Droid Sans">
+                </fontdef>
+                <fontdef name="previewfont_desc-droidsans" from="menufont_desc_selected" face="Droid Sans">
+                </fontdef>
+                
+                <fontdef name="previewfont-lucidagrande" from="menufont_selected" face="Lucida Grande">
+                </fontdef>
+                <fontdef name="previewfont_desc-lucidagrande" from="menufont_desc_selected" face="Lucida Grande">
+                </fontdef>
+                
+                <fontdef name="previewfont-ubuntu" from="menufont_selected" face="Ubuntu">
+                </fontdef>
+                <fontdef name="previewfont_desc-ubuntu" from="menufont_desc_selected" face="Ubuntu">
+                </fontdef>
+                
+                <group name="fontpreview-droidsans">
+                    <area>1,98,956,185</area>
+                    
+                    <shape name="fontpreview-selectbar">
+                        <area>0,0,100%,100%</area>
+                        <!-- barry-selectcolour-normal --><fill color="#0096ff" alpha="192" />
+                        <alpha>240</alpha>
+                    </shape>
+                    
+                    <textarea name="fontpreview-buttontext">
+                        <area>12,0,100%,72</area>
+                        <font>previewfont-droidsans</font>
+                        <align>left,vcenter</align>
+                        <cutdown>yes</cutdown>
+                        <value>Preview (Droid Sans)</value>
+                    </textarea>
+                    
+                    <shape name="fontpreview-descbg_selected">
+                        <area>0,74,100%,100%</area>
+                        <type>box</type>
+                        <fill color="#000000" alpha="48" />
+                    </shape>
+                    
+                    <textarea name="fontpreview-description">
+                        <area>12,78,65%,100%-4</area>
+                        <font>previewfont_desc-droidsans</font>
+                        <align>left,top</align>
+                        <cutdown>yes</cutdown>
+                        <multiline>yes</multiline>
+                        <value>Description</value>
+                    </textarea>
+                    
+                    <imagetype name="fontpreview-icon">
+                        <alpha>240</alpha>
+                    </imagetype>
+                    
+                </group>
+                
+                <group name="fontpreview-lucidagrande" from="fontpreview-droidsans">
+                    <area>965,98,956,185</area>
+                    
+                    <textarea name="fontpreview-buttontext">
+                        <font>previewfont-lucidagrande</font>
+                        <value>Preview (Lucida Grande)</value>
+                    </textarea>
+                    
+                    <textarea name="fontpreview-description">
+                        <font>previewfont_desc-lucidagrande</font>
+                    </textarea>
+                </group>
+                
+                <group name="fontpreview-ubuntu" from="fontpreview-droidsans">
+                    <area>1,677,956,185</area>
+                    
+                    <textarea name="fontpreview-buttontext">
+                        <font>previewfont-ubuntu</font>
+                        <value>Preview (Ubuntu)</value>
+                    </textarea>
+                    
+                    <textarea name="fontpreview-description">
+                        <font>previewfont_desc-ubuntu</font>
+                    </textarea>
+                </group>
+                
+<!-- 
+                <group name="fontpreview-red" from="fontpreview-droidsans">
+                    <area>965,677,956,185</area>
+                    
+                    <shape name="fontpreview-selectbar">
+                        <fill color="#cb0000" alpha="192" />
+                    </shape>
+                    
+                    <textarea name="fontpreview-buttontext">
+                        <value>Preview (Cayenne)</value>
+                    </textarea>
+                </group>
+ -->
+            </state>
+            <state name="BARRY_FONT_DROIDSANS" from="BARRY_FONT-base" />
+            <state name="BARRY_FONT_LUCIDAGRANDE" from="BARRY_FONT-base" />
+            <state name="BARRY_FONT_UBUNTU" from="BARRY_FONT-base" />
+            
+            <!-- BARRY_BACKDROP-base -->
+            <state name="BARRY_BACKDROP-base">
+                <imagetype name="previewbackdrop-sj_pixelate1">
+                    <area>1,0,956,283</area>
+                    <preserveaspect>true</preserveaspect>
+                    <filename>backdrops/sj_pixelate1.png</filename>
+                </imagetype>
+                
+                <imagetype name="previewbackdrop-sj_noisypixels1">
+                    <area>965,0,956,283</area>
+                    <preserveaspect>true</preserveaspect>
+                    <filename>backdrops/sj_noisypixels1.png</filename>
+                </imagetype>
+                
+                <imagetype name="previewbackdrop-sj_lyrapixels1">
+                    <area>1,677,956,283</area>
+                    <preserveaspect>true</preserveaspect>
+                    <filename>backdrops/sj_lyrapixels1.png</filename>
+                </imagetype>
+                
+                <shape name="previewbackdrop-sj_black">
+                    <area>1191,677,504,283</area>
+                    <fill color="#000000" />
+                </shape>
+                
+            </state>
+            <state name="BARRY_BACKDROP_PIXELATE" from="BARRY_BACKDROP-base" />
+            <state name="BARRY_BACKDROP_NOISYPIXELS" from="BARRY_BACKDROP-base" />
+            <state name="BARRY_BACKDROP_LYRAPIXELS" from="BARRY_BACKDROP-base" />
+            <state name="BARRY_BACKDROP_NONE" from="BARRY_BACKDROP-base" />
+        </statetype>
+        
+        <group name="colourbar" from="basecolourbar">
+        </group>
+        
+    </window>
+    
+</mythuitheme>

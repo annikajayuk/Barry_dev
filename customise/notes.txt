@@ -1,0 +1,62 @@
+Aqua (blue):
+    DEC HSB  205 100 100
+    HEX RGB   #0096ff
+    
+    Guide:   205 100  75
+              #0071c0
+
+
+Tangerine (orange):
+    DEC HSB   25 100 100
+    HEX RGB   #ff6a00
+    
+    Guide:    25 100  75
+              #bf4f00
+
+
+Grape (purple):
+    DEC HSB  270 100 100
+    HEX RGB   #7f35fe
+    
+    Guide:   270 100  75
+              #5f25bf
+
+
+Cayenne (red):
+    DEC HSB    0 100  80
+    HEX RGB   #cb0000
+    
+    Guide:     0 100  65
+              #a50000
+
+
+<!-- barry-selectcolour-normal -->
+<!-- barry-selectcolour-guide -->
+
+<!-- barry-selectcolour-normal --><fill color="#ff6a00"
+<!-- barry-selectcolour-guide --><selector type="box" fillcolor="#bf4f00"
+
+sed 's/<!-- barry-selectcolour-normal --><fill color="#......"/<!-- barry-selectcolour-normal --><fill color="#0096ff"/' menu-ui.xml > menu-ui.xml.new
+sed 's/<!-- barry-selectcolour-guide --><selector type="box" fillcolor="#......"/<!-- barry-selectcolour-guide --><selector type="box" fillcolor="#0071c0"/' schedule-ui.xml > schedule-ui.xml.new
+
+s/<!-- barry-selectcolour-normal --><fill color="#......"/<!-- barry-selectcolour-normal --><fill color="#0096ff"/
+s/<!-- barry-selectcolour-guide --><selector type="box" fillcolor="#......"/<!-- barry-selectcolour-guide --><selector type="box" fillcolor="#0071c0"/
+
+
+gsed -i '' -f$HOME/.mythtv/themes/Barry_dev/customise/colour-red.sed $HOME/.mythtv/themes/Barry_dev/*.xml
+echo key f24|nc localhost 6546
+
+<state name="BARRY_COLOUR_B" from="BARRY_MENUSTATE_E"
+<state name="BARRY_COLOUR_O" from="BARRY_MENUSTATE_E"
+<state name="BARRY_COLOUR_P" from="BARRY_MENUSTATE_E"
+<state name="BARRY_COLOUR_R" from="BARRY_MENUSTATE_E"
+
+s/<state name="BARRY_COLOUR_B" from="BARRY_MENUSTATE_."/<state name="BARRY_COLOUR_B" from="BARRY_MENUSTATE_E"/
+s/<state name="BARRY_COLOUR_O" from="BARRY_MENUSTATE_."/<state name="BARRY_COLOUR_O" from="BARRY_MENUSTATE_E"/
+s/<state name="BARRY_COLOUR_P" from="BARRY_MENUSTATE_."/<state name="BARRY_COLOUR_P" from="BARRY_MENUSTATE_E"/
+s/<state name="BARRY_COLOUR_R" from="BARRY_MENUSTATE_."/<state name="BARRY_COLOUR_R" from="BARRY_MENUSTATE_E"/
+
+
+
+
+

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+    <!-- 720->1080 *1.5: done -->
+
+    <window name="appearance">
+        <textarea name="part">
+            <font>baselarge</font>
+            <area>30,30,1200,60</area>
+            <value>Appearance Wizard</value>
+            <align>center</align>
+        </textarea>
+
+        <shape name="blackout">
+            <type>box</type>
+            <fill style="solid" color="black"></fill>
+        </shape>
+
+        <imagetype name="preview">
+            <filename>preview.png</filename>
+            <preserveaspect>FALSE</preserveaspect>
+        </imagetype>
+
+        <textarea name="part1">
+            <font>baselarge</font>
+            <area>150,210,900,255</area>
+            <value>Move the selected corner of the preview image to the corner of the TV screen.  Press SELECT to edit the other corner.  Press MENU for options and ESC to quit.</value>
+            <multiline>yes</multiline>
+        </textarea>
+
+        <textarea name="size">
+            <font>baselarge</font>
+            <area>150,405,750,75</area>
+        </textarea>
+
+        <textarea name="offsets">
+            <font>baselarge</font>
+            <area>150,480,750,210</area>
+        </textarea>
+
+        <textarea name="changeamount">
+            <font>baselarge</font>
+            <area>150,780,750,210</area>
+        </textarea>
+
+    </window>
+</mythuitheme>

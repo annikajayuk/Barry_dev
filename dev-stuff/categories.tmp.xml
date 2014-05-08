@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<categorycolors>
+  <catcolor category="Unknown" color="#222200"></catcolor>
+
+  <catcolor category="arts/culture" color="goldenrod"></catcolor>
+  <catcolor category="Drama" color="rosybrown3"></catcolor>
+  <catcolor category="Education/Science/Factual" color="CornflowerBlue"></catcolor>
+  <catcolor category="Entertainment" color="DarkOrchid"></catcolor>
+  <catcolor category="Film" color="Blue"></catcolor>
+  <catcolor category="Kids" color="MediumSlateBlue"></catcolor>
+  <catcolor category="Leisure/Hobbies" color="red"></catcolor>
+  <catcolor category="music/ballet/dance" color="DarkRed"></catcolor>
+  <catcolor category="News" color="DarkOrange3"></catcolor>
+  <catcolor category="science" color="#33ff99"></catcolor>
+  <catcolor category="series" color="DarkOrchid"></catcolor>
+  <catcolor category="show/game show" color="orchid"></catcolor>
+  <catcolor category="social/political/economics" color="DarkOrange3"></catcolor>
+  <catcolor category="Sports" color="DarkCyan"></catcolor>
+  <catcolor category="technology" color="#33ff99"></catcolor>
+  <catcolor category="tourism/travel" color="#aa00aa"></catcolor>
+  
+<!-- 
+  <catcolor category="arts/culture" color="goldenrod"></catcolor>
+  <catcolor category="Drama" color="rosybrown3"></catcolor>
+  <catcolor category="Education/Science/Factual" color="CornflowerBlue"></catcolor>
+  <catcolor category="Entertainment" color="DarkOrchid"></catcolor>
+  <catcolor category="Film" color="Blue"></catcolor>
+  <catcolor category="Kids" color="MediumSlateBlue"></catcolor>
+  <catcolor category="Leisure/Hobbies" color="red"></catcolor>
+  <catcolor category="music/ballet/dance" color="DarkRed"></catcolor>
+  <catcolor category="News" color="DarkOrange3"></catcolor>
+  <catcolor category="science" color="#33ff99"></catcolor>
+  <catcolor category="series" color="DarkOrchid"></catcolor>
+  <catcolor category="show/game show" color="orchid"></catcolor>
+  <catcolor category="social/political/economics" color="DarkOrange3"></catcolor>
+  <catcolor category="Sports" color="DarkCyan"></catcolor>
+  <catcolor category="technology" color="#33ff99"></catcolor>
+  <catcolor category="tourism/travel" color="#aa00aa"></catcolor>
+ -->
+</categorycolors>

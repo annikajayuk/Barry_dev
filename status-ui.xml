@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE mythuitheme SYSTEM "http://www.mythtv.org/schema/mythuitheme.dtd">
+<mythuitheme>
+
+    <window name="status">
+        
+        <group name="titlebar" from="basetitlebar">
+            <area>0,0,1920,58</area>
+            
+            <textarea name="heading" from="basetb-title">
+                <value>System Status</value>
+            </textarea>
+            
+        </group>
+        
+        <buttonlist name="category" from="basebuttonlist2">
+            <area>0,60,1920,45</area>
+            <layout>horizontal</layout>
+<!--             <spacing>2</spacing> -->
+            <statetype name="buttonitem">
+                <area>0,0,320,45</area>
+                <state name="active">
+                    <area>0,0,320,45</area>
+                    <shape name="selectbar" from="baseselectbar_active" />
+                    <textarea name="buttontext">
+                        <align>allcenter</align>
+                        <font>basesmall_normal</font>
+                    </textarea>
+                </state>
+                <state name="selectedactive" from="active">
+                    <shape name="selectbar" from="baseselectbar_selectedactive" />
+                    <textarea name="buttontext">
+                        <align>allcenter</align>
+                        <font>basesmall_normal_selected</font>
+                    </textarea>
+                </state>
+                <state name="selectedinactive" from="active">
+                    <shape name="selectbar" from="baseselectbar_selectedinactive" />
+                    <textarea name="buttontext">
+                        <align>allcenter</align>
+                        <font>basesmall_normal_selected_inactive</font>
+                    </textarea>
+                </state>
+            </statetype>
+            <searchposition>-1,490</searchposition>
+        </buttonlist>
+        
+        <buttonlist name="log" from="basebuttonlist2">
+            <area>0,107,1920,720</area>
+            <searchposition>-1,490</searchposition>
+            <scrollbar name="scrollbar" from="basevertscrollbar">
+                <area>100%-8,0,8,100%</area>
+            </scrollbar>
+        </buttonlist>
+        
+        <shape name="helptextbg">
+            <area>0,829,1920,191</area>
+            <fill color="#ffffff" alpha="32" />
+        </shape>
+        
+        <textarea name="helptext" from="basetextarea">
+            <area>8,837,1904,183</area>
+            <value>This screen displays the status of various system components</value>
+            <multiline>yes</multiline>
+        </textarea>
+        
+        <group name="colourbar" from="basecolourbar">
+            <group name="bcb-b">
+                <alpha>0</alpha>
+            </group>
+        </group>
+    </window>
+    
+</mythuitheme>
+
